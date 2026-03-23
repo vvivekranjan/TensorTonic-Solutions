@@ -24,7 +24,6 @@ def train_logistic_regression(X, y, lr=0.1, steps=1000):
         loss = -1 * ((y*np.log(p) + (1 - y)*np.log(1 - p)).sum()).mean()
 
         dw = (X.T @ (p - y))/m
-
         
         w -= lr * dw
         b -= lr * (p - y).mean()
